@@ -1,0 +1,68 @@
+# Default: normalize CRLF into LF in non-binary files
+# Files identified as binary by Git are not changed
+* crlf=auto
+
+# special files
+*.sh crlf=input
+*.py crlf=input
+
+*.bat text eol=crlf
+
+# Compressed files
+*.gz binary
+*.sql.gz.* binary
+*.GZ binary
+*.tar binary
+*.TAR binary
+*.tgz binary
+*.TGZ binary
+*.zip binary
+*.ZIP binary
+*.7z binary
+*.7Z binary
+*.rar binary
+*.RAR binary
+*.xz binary
+*.XZ binary
+
+# Images
+*.jpeg binary
+*.JPEG binary
+*.jpg binary
+*.JPG binary
+*.png binary
+*.PNG binary
+*.gif binary
+*.GIF binary
+*.psd binary
+*.PSD binary
+*.ai binary
+*.AI binary
+*.xcf binary
+*.XCF binary
+
+# PDFs
+*.pdf binary
+*.PDF binary
+
+# MySQL
+*.frm binary
+*.ibd binary
+*.MYD binary
+*.MYI binary
+*.CSM binary
+*.CSV binary
+ib_logfile* binary
+ib_data* binary
+
+# Font Files
+*.ttf binary
+*.TTF binary
+*.woff binary
+*.WOFF binary
+*.woff2 binary
+*.WOFF2 binary
+*.otf binary
+*.OTF binary
+*.eot binary
+*.EOT binary
