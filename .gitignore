@@ -1,4 +1,6 @@
+cross-build/build-ctx/cache/
 cross-build/dist/
+native-build/build-ctx/cache/
 native-build/dist/
 
 

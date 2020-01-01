@@ -9,11 +9,11 @@ ENV LANG C.UTF-8
 ARG CF_DOCKER_COMPOSE_VER
 ENV CF_DOCKER_COMPOSE_VER ${CF_DOCKER_COMPOSE_VER}
 
-# docker-compose requires pyinstaller 3.3.1 (check github.com/docker/compose/requirements-build.txt)
+# docker-compose requires pyinstaller 3.5 (check github.com/docker/compose/requirements-build.txt)
 # If this changes, you may need to modify the version of "six" below
-ENV PYINSTALLER_VER 3.3.1
-# "six" is needed for PyInstaller. v1.11.0 is the latest as of PyInstaller 3.3.1
-ENV SIX_VER 1.11.0
+ENV PYINSTALLER_VER 3.5
+# "six" is needed for PyInstaller. v1.13.0 is the latest as of PyInstaller 3.5
+ENV SIX_VER 1.13.0
 
 # Install dependencies
 # RUN apt-get update && apt-get install -y
@@ -42,8 +42,8 @@ RUN \
 RUN \
 	mkdir ./dist \
 	&& pip install -r requirements.txt -r requirements-build.txt \
-	&& ./script/build/write-git-sha \
-	&& pyinstaller docker-compose.spec
+	&& ./script/build/write-git-sha > compose/GITSHA \
+	&& pyinstaller --exclude-module pycrypto --exclude-module PyInstaller docker-compose.spec
 
 ARG CF_CPUARCH_DEB_DIST
 
