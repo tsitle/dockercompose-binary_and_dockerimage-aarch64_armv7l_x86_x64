@@ -35,8 +35,8 @@ RUN \
 WORKDIR /build/dockercompose
 
 RUN \
-	git clone https://github.com/docker/compose.git . \
-	&& git checkout ${CF_DOCKER_COMPOSE_VER}
+	git clone -b ${CF_DOCKER_COMPOSE_VER} https://github.com/docker/compose.git . 
+	#&& git checkout ${CF_DOCKER_COMPOSE_VER}
 
 # Run the build steps (taken from github.com/docker/compose/script/build/linux-entrypoint)
 RUN \
