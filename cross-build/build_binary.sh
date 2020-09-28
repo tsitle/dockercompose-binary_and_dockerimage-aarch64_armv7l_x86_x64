@@ -186,7 +186,7 @@ _getCommonFile "qemu_binary_static/qemu-${LVAR_QEMU_TRG_ARCH}-static.tgz" || exi
 
 LVAR_DEBIAN_DIST="$(_getCpuArch debian_dist)"
 
-LVAR_DOCKER_COMPOSE_VER="1.25.0"
+LVAR_DOCKER_COMPOSE_VER="1.27.4"
 
 LVAR_IMAGE_NAME="docker-compose-${OPT_DEBIAN_TRG_DIST}-builder-cross-${LVAR_DEBIAN_DIST}"
 LVAR_IMAGE_VER="$LVAR_DOCKER_COMPOSE_VER"
